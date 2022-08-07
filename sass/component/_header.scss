@@ -1,0 +1,139 @@
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  background-color: var(--header-bg-color);
+  border-bottom: 1px solid #ececec;
+
+  &__logo {
+    font-weight: 700;
+    font-family: var(--logo-font-family);
+    font-size: 26px;
+    line-height: 1.19;
+    margin-right: 88px;
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 25px;
+
+    @media (min-width: 768px) {
+      margin-right: 93px;
+    }
+  }
+}
+
+.logo__main {
+  color: var(--logo-main-color);
+}
+
+.logo__dark {
+  color: var(--logo-header-color);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: none;
+
+    @media (min-width: 485px) {
+      display: flex;
+    }
+  }
+
+  &__link {
+    position: relative;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--header-color);
+    padding: 32px 0;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color);
+  }
+
+  &__list .link.current {
+    color: var(--accent-color);
+  }
+}
+
+.current::after {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+
+.contacts {
+  margin-left: auto;
+  display: none;
+  flex-direction: column;
+
+  @media screen and (min-width: 485px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 780px) {
+    flex-direction: row;
+  }
+
+  &__item + &__item {
+    margin-top: 10px;
+
+    @media screen and (min-width: 780px) {
+      margin-left: 50px;
+      margin-top: 0;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    line-height: 1.14;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: var(--header-contacts-color);
+    // display: block;
+
+    display: flex;
+    align-items: center;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media (min-width: 780px) {
+      padding: 32px 0;
+      font-size: 14px;
+    }
+  }
+
+  &__link:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color);
+  }
+}
+
+.icon-envelope,
+.icon-smartphone {
+  fill: currentColor;
+  margin-right: 10px;
+}
