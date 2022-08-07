@@ -13,27 +13,27 @@
   text-align: center;
   @media screen and (min-width: 768px) {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
   }
 }
 
 .footer__nav {
   margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    width: 232px;
+    margin-right: 165px;
+  }
+
   @media screen and (min-width: 1200px) {
     text-align: left;
+    margin-right: 70px;
   }
 }
 
 .footer__logo {
-  font-family: var(--logo-font-family);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   padding: 20px 0;
-}
-
-.logo__light {
-  color: var(--logo-footer-color);
 }
 
 .address {
@@ -79,6 +79,9 @@
 
   @mixin tablet {
     margin-bottom: 0;
+    margin-left: auto;
+    display: flex;
+    width: 206px;
   }
 }
 
@@ -91,6 +94,10 @@
     letter-spacing: 0.03em;
     color: var(--main-title-color);
     margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
 
   &__list {
@@ -132,15 +139,21 @@
 }
 
 .footer__subscribe {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  // align-items: center;
+  // justify-content: center;
+  text-align: left;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    width: 570px;
+  }
 }
 
 .subscribe {
-  @media screen and (min-width: 1200px) {
-    margin-left: auto;
-  }
   &__field {
     @media screen and (min-width: 1200px) {
       display: flex;
@@ -149,6 +162,11 @@
 
   &__input {
     width: 100%;
+    margin-bottom: 20px;
+    @media screen and (min-width: 1200px) {
+      width: 360px;
+      margin-bottom: 0;
+    }
     height: 50px;
     color: var(--main-footer-text-color);
     background-color: transparent;
@@ -176,10 +194,15 @@
     color: var(--main-title-color);
     margin-bottom: 20px;
     text-transform: uppercase;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
 
   &__field .button {
     margin-top: 0;
+    height: 50px;
   }
 
   &__btn {

@@ -8,27 +8,16 @@
   border-bottom: 1px solid #ececec;
 
   &__logo {
-    font-weight: 700;
-    font-family: var(--logo-font-family);
-    font-size: 26px;
-    line-height: 1.19;
     margin-right: 88px;
     display: block;
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding: 16px 0;
 
     @media (min-width: 768px) {
       margin-right: 93px;
+      padding-top: 24px;
+      padding-bottom: 25px;
     }
   }
-}
-
-.logo__main {
-  color: var(--logo-main-color);
-}
-
-.logo__dark {
-  color: var(--logo-header-color);
 }
 
 .navigation {
@@ -66,6 +55,14 @@
 
   &__list .link.current {
     color: var(--accent-color);
+  }
+}
+
+.header__mobile-menu {
+  display: block;
+
+  @media (min-width: 485px) {
+    display: none;
   }
 }
 

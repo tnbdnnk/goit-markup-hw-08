@@ -1,7 +1,23 @@
 .portfolio-nav {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  // justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}
+
+.portfolio-nav-item {
+  margin-bottom: 15px;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .portfolio-nav-item:not(:last-child) {
@@ -44,7 +60,7 @@
 
   @media screen and (min-width: 1200px) {
     margin: -15px;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 
@@ -52,6 +68,9 @@
   width: 370px;
   background-color: var(--pf-item-bg);
   cursor: pointer;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 
   @media screen and (min-width: 768px) {
     width: calc((100% - 2 * 30px) / 2);
@@ -59,7 +78,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    width: calc((100% - 6 * 30px) / 3);
+    width: calc((100% - 3 * 30px) / 3);
     margin: 15px;
 
     // &:not(:nth-child(3n)) {
@@ -111,9 +130,6 @@
 
 .portfolio-text {
   padding: 20px 24px;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
 }
 
 .portfolio-title {
