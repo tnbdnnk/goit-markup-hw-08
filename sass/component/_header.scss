@@ -8,7 +8,7 @@
   border-bottom: 1px solid #ececec;
 
   &__logo {
-    margin-right: 88px;
+    margin-right: 40px;
     display: block;
     padding: 16px 0;
 
@@ -38,10 +38,14 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--header-color);
-    padding: 32px 0;
+    padding: 24px 0;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 768px) {
+      padding: 32px 0;
+    }
   }
 
   &__item:not(:last-child) {
@@ -55,14 +59,6 @@
 
   &__list .link.current {
     color: var(--accent-color);
-  }
-}
-
-.header__mobile-menu {
-  display: block;
-
-  @media (min-width: 485px) {
-    display: none;
   }
 }
 
@@ -86,14 +82,23 @@
     display: flex;
   }
 
-  @media screen and (min-width: 780px) {
+  // @media screen and (min-width: 780px) {
+  //   flex-direction: row;
+  // }
+
+  @media screen and (min-width: 1050px) {
     flex-direction: row;
   }
 
   &__item + &__item {
     margin-top: 10px;
 
-    @media screen and (min-width: 780px) {
+    // @media screen and (min-width: 780px) {
+    //   margin-left: 50px;
+    //   margin-top: 0;
+    // }
+
+    @media screen and (min-width: 1050px) {
       margin-left: 50px;
       margin-top: 0;
     }
@@ -113,7 +118,12 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-    @media (min-width: 780px) {
+    // @media (min-width: 780px) {
+    //   padding: 32px 0;
+    //   font-size: 14px;
+    // }
+
+    @media (min-width: 1050px) {
       padding: 32px 0;
       font-size: 14px;
     }

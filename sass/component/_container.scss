@@ -15,4 +15,16 @@
   @media screen and (min-width: 1200px) {
     width: 1200px;
   }
+
+  position: relative;
+}
+
+.menu-container {
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
 }

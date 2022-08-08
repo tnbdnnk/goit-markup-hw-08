@@ -1,0 +1,145 @@
+.header__mobile-menu {
+  display: block;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+
+  @media (min-width: 485px) {
+    display: none;
+  }
+}
+
+.menu-btn {
+  color: #212121;
+  background-color: #fff;
+  border: none;
+
+  &:hover,
+  &:focus {
+    color: #2196f3;
+  }
+}
+
+.header__open-menu {
+  display: block;
+  margin-left: auto;
+
+  @media (min-width: 485px) {
+    display: none;
+  }
+
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.header__close-menu {
+  display: block;
+  margin-left: auto;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.mobile-menu {
+  &__list {
+    margin-bottom: 32px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: calc(47 / 40);
+    letter-spacing: 0.02em;
+    color: #212121;
+
+    @media screen and (min-width: 380px) {
+      font-size: 40px;
+    }
+
+    &:hover,
+    &:focus {
+      color: #2196f3;
+    }
+  }
+}
+
+.mobile-contacts {
+  &__list {
+    margin-bottom: 64px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__tell {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: calc(40 / 34);
+    letter-spacing: 0.02em;
+    color: #2196f3;
+
+    @media screen and (min-width: 380px) {
+      font-size: 34px;
+    }
+  }
+
+  &__mail {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: calc(28 / 24);
+    letter-spacing: 0.02em;
+    color: #757575;
+  }
+}
+
+.mobile-soc {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item:nth-child(-n + 2) {
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 480px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item:nth-child(2n + 1)::after {
+    content: "";
+    width: 1px;
+    height: 22px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    margin: 0 10px;
+  }
+
+  @media screen and (min-width: 340px) {
+    &__item:not(:last-child)::after {
+      content: "";
+      width: 1px;
+      height: 22px;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      margin: 0 10px;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    letter-spacing: 0.02em;
+    color: #2196f3;
+  }
+}

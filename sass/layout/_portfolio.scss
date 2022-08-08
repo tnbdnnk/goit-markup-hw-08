@@ -65,12 +65,14 @@
 }
 
 .portfolio-item {
-  width: 370px;
+  width: 100%;
   background-color: var(--pf-item-bg);
   cursor: pointer;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+  margin-right: 0;
+  margin-bottom: 30px;
 
   @media screen and (min-width: 768px) {
     width: calc((100% - 2 * 30px) / 2);
