@@ -168,7 +168,7 @@ img {
     display: flex;
   }
 }
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1200px) {
   .contacts {
     flex-direction: row;
   }
@@ -176,7 +176,7 @@ img {
 .contacts__item + .contacts__item {
   margin-top: 10px;
 }
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1200px) {
   .contacts__item + .contacts__item {
     margin-left: 50px;
     margin-top: 0;
@@ -194,7 +194,7 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media (min-width: 1050px) {
+@media (min-width: 1200px) {
   .contacts__link {
     padding: 32px 0;
     font-size: 14px;
