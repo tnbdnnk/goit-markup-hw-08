@@ -9,7 +9,7 @@
   height: 100vh;
   z-index: 1;
 
-  @media (min-width: 485px) {
+  @media (min-width: 768px) {
     display: none;
   }
 }
@@ -29,7 +29,7 @@
   display: block;
   margin-left: auto;
 
-  @media (min-width: 485px) {
+  @media (min-width: 768px) {
     display: none;
   }
 
@@ -49,6 +49,10 @@
 .mobile-menu {
   &__list {
     margin-bottom: 32px;
+  }
+
+  &__list .link.current {
+    color: var(--accent-color);
   }
 
   &__item:not(:last-child) {

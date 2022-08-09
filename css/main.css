@@ -116,7 +116,7 @@ img {
 .navigation__list {
   display: none;
 }
-@media (min-width: 485px) {
+@media (min-width: 768px) {
   .navigation__list {
     display: flex;
   }
@@ -163,7 +163,7 @@ img {
   display: none;
   flex-direction: column;
 }
-@media screen and (min-width: 485px) {
+@media screen and (min-width: 768px) {
   .contacts {
     display: flex;
   }
@@ -223,7 +223,7 @@ img {
   height: 100vh;
   z-index: 1;
 }
-@media (min-width: 485px) {
+@media (min-width: 768px) {
   .header__mobile-menu {
     display: none;
   }
@@ -245,7 +245,7 @@ img {
   top: 10px;
   right: 15px;
 }
-@media (min-width: 485px) {
+@media (min-width: 768px) {
   .header__open-menu {
     display: none;
   }
@@ -261,6 +261,9 @@ img {
 
 .mobile-menu__list {
   margin-bottom: 32px;
+}
+.mobile-menu__list .link.current {
+  color: var(--accent-color);
 }
 .mobile-menu__item:not(:last-child) {
   margin-bottom: 32px;
@@ -778,14 +781,15 @@ button {
 
 .checkbox {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 30px;
   align-items: center;
+  justify-content: center;
 }
 
 .check-text {
   font-weight: 400;
   font-size: 12px;
-  line-height: 0.14;
   letter-spacing: 0.03em;
   color: #757575;
   display: flex;
@@ -798,6 +802,11 @@ button {
   border: 2px solid #212121;
   border-radius: 2px;
   margin-right: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .check-text {
+    font-size: 14px;
+  }
 }
 
 .modal-check:checked + .check-text::before {
@@ -815,12 +824,16 @@ button {
 .check-link {
   font-weight: 400;
   font-size: 12px;
-  line-height: 0.14;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--accent-color);
   margin-left: 3px;
   margin-right: auto;
+}
+@media screen and (min-width: 1200px) {
+  .check-link {
+    font-size: 14px;
+  }
 }
 
 .button {
@@ -862,10 +875,10 @@ button {
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/hero-mobile@2.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mobile@2.jpg);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 481px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet.jpg);
     background-size: 768px 400px;
@@ -873,7 +886,7 @@ button {
     max-height: 400px;
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet@2.jpg);
   }
@@ -1386,7 +1399,7 @@ button {
   background-color: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;
   height: 100%;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
