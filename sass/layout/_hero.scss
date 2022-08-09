@@ -8,9 +8,18 @@
     ),
     url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center;
+  // background-size: cover;
+  background-size: 1600px 600px;
   max-width: 1600px;
+  max-width: 600px;
   margin: 0 auto;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/hero-bg@2.jpg);
+  }
 
   &__title {
     font-weight: 900;
