@@ -62,7 +62,7 @@
   }
 }
 
-.current::after {
+.navigation__list .current::after {
   position: absolute;
   bottom: 0;
   display: block;
